@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordQuest: Temperature Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="game-card">
+    <header>
+      <p class="eyebrow">🧠 WORD GUESSING GAME</p>
+      <h1>WordQuest <span>🌡️</span></h1>
+      <p class="subtitle">Temperature Challenge</p>
+    </header>
+
+    <section class="game-info">
+      <div class="info-box">
+        <span class="info-icon">🔬</span>
+        <div>
+          <p class="info-label">Category</p>
+          <p class="info-value">Science</p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <span class="info-icon">🔤</span>
+        <div>
+          <p class="info-label">Word Length</p>
+          <p class="info-value">6 Letters</p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <span class="info-icon">🎯</span>
+        <div>
+          <p class="info-label">Guesses</p>
+          <p class="info-value" id="guess-count">0 / 20</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="guess-section">
+      <h2>Guess the secret 6-letter science word! 🤔</h2>
+      <p class="small-text">You have up to 20 guesses. The word will be revealed after guess 20.</p>
+
+      <div class="input-row">
+        <input
+          type="text"
+          id="guess-input"
+          maxlength="6"
+          placeholder="Type your guess"
+          autocomplete="off"
+          aria-label="Enter a six-letter word"
+        >
+        <button id="submit-button">Submit Guess 🚀</button>
+      </div>
+
+      <p id="message" class="message" aria-live="polite">
+        Type a 6-letter word to begin!
+      </p>
+    </section>
+
+    <section class="temperature-section">
+      <h2>How close are you? 🌡️</h2>
+
+      <div class="temperature-result">
+        <span id="temperature-emoji">❄️</span>
+        <span id="temperature-text">Temperature: --</span>
+      </div>
+
+      <div class="thermometer-area">
+        <div class="thermometer">
+          <div class="thermometer-fill" id="thermometer-fill"></div>
+        </div>
+        <div class="thermometer-bulb" id="thermometer-bulb"></div>
+      </div>
+
+      <div class="thermometer-labels">
+        <span>❄️ Cold</span>
+        <span>🔥 Hot</span>
+      </div>
+
+      <p id="percentage-text" class="percentage-text">0% close</p>
+    </section>
+
+    <section class="history-section">
+      <h2>Previous Guesses 📜</h2>
+      <ul id="guess-history">
+        <li class="empty-history">Your guesses will appear here.</li>
+      </ul>
