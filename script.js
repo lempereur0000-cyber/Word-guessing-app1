@@ -1,3 +1,4 @@
+alert("JavaScript is connected!");
 const secretWord = "energy";
 const maxGuesses = 20;
 
